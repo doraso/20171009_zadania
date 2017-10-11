@@ -36,7 +36,7 @@ public class Person {
         this.pesel = pesel;
     }
 
-    public Person(String firstName, String lastName, int age, String pesel) {
+    public Person(String firstName, String lastName, int age, String pesel) throws NameUndefinedException, IncorrectAgeException{
         if (firstName == null || lastName == null || (firstName.length()<=2) || (lastName.length()<=2)){
             throw new NameUndefinedException();
         }
